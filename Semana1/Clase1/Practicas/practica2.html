@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edad Perruna</title>
+</head>
+<body>
+    <style>
+        .colored{
+            color: #EA899A;
+        }
+    </style>
+   
+    Nombre:
+    <div class="colored" id="name">Lisbeth</div>
+    Edad Humana:
+    <div class="colored" id="humanAge">23</div>
+
+<script>
+    var name = document.getElementById('name').textContent;
+    var humanAge = document.getElementById('humanAge').textContent;
+    const FIRSTYEARS = 10.5;
+    var lessAge = humanAge-2;
+    var dogAge = FIRSTYEARS + (lessAge*4);
+    console.log(`Hola, soy ${name}, tengo ${humanAge} años humanos, lo cual es igual a ${dogAge} años perro`);
+    //console.log("Hola, soy "+name+", tengo "+humanAge+" años humanos, lo cual es igual a "+dogAge+" años perro");
+</script>
+</body>
+</html>
