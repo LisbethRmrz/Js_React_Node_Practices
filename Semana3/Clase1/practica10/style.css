@@ -67,9 +67,13 @@ div.base{
     /* position: relative;  */
 }
 
+.diskGroup{
+    margin-top: -95px;
+}
+
 .disk1
 {
-    margin-top: -95px;
+   
     border-left: 36px solid rgb(235, 226, 144);
     border-right: 36px solid rgb(235, 226, 144);
     width: 36px;
@@ -77,6 +81,15 @@ div.base{
     background-color: #007ac0;
     margin-left: 20%;
 }
+
+/* .diskNew
+{
+    margin-top: -95px;
+    width: 108px;
+    height: 24px;
+    background-color: #12872B;
+    margin-left: 44%;
+} */
 
 .disk2
 {

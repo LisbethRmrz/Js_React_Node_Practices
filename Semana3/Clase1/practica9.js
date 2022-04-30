@@ -4,11 +4,11 @@ getValue = (value) => {
             resolve(value);
         }
         else{
-            reject();
+            reject(new Error("Is an integer"));
         }
     })
 }
 
-getValue(1.2)
-.then(result => {console.log("Success!,", result);})
-.catch(err => {console.log("Can't resolve your value");});
+getValue(1.3)
+.then(result => {console.log("Success!", result);})
+.catch(err => {console.log(err.message);});

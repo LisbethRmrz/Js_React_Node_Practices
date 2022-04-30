@@ -1,18 +1,21 @@
 function highOrder(data, cb){
     if(!cb || !(typeof cb === 'function')){
-        // throw new Error('Invalid callback function!');
-        console.log("Invalid callback function!");
+        throw new Error('Invalid callback function!');
     }
     else{        
         console.log(data);
-        let result = {message: "I'm cb"};
-        let err = true;
-        cb(err, result);
-        //setTimeout(cb(err, result), 1000);
+        setTimeout(cb, 10);
     }
 }
 
-    highOrder("hola", function(err, result) {
-        console.log(result.message);
-    });
+try{
+    highOrder("Data Message", function cb(err = "I'm an Error Message", result = "I'm a Result Message"){
+        console.log(err);
+        console.log(result);
+    })  //Valid Callback
 
+    // highOrder("Data Message", cb = 12); // Invalid Callback
+}
+catch(Error){
+    console.log(Error.message);
+}
