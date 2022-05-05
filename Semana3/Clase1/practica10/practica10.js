@@ -20,8 +20,15 @@ function moveElementToSecondStick(){
     let newChild = document.createElement(`div`);
     newChild.className = `disk${disk}`;
     let firstChild = diskGroup2.firstChild;
+    let lastChild = diskGroup2.lastChild;
     
-    (diskGroup2Childs.length > 0) ? diskGroup2.insertBefore(newChild, firstChild) : diskGroup2.insertBefore(newChild, null);
+    if(firstChild.textContent > disk){
+    
+        (diskGroup2Childs.length > 0) ? diskGroup2.insertBefore(newChild, firstChild) : diskGroup2.insertBefore(newChild, null);
+    }
+    else{
+        console.log("No se puede mover")
+    }
 
     let text = document.createTextNode(`${disk}`);
     newChild.appendChild(text);

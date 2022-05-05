@@ -18,7 +18,7 @@ div.base{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 190px;
-    /* position: relative; */
+    position: relative;
 	background-color: var(--wood);	
     z-index: 1;	
 }
@@ -26,9 +26,9 @@ div.base{
 .leftTower, .centerTower, .rightTower {
     display: inline-flex;
     width: 1%;
-    height: 180px;
+    height: 110px;
     background-color: var(--wood);			
-	margin-top: -150px;
+	margin-top: -95px;
     position: fixed;
     z-index: -1;
 }
@@ -59,9 +59,9 @@ div.base{
     /* position: relative;  */
 }
 
-.diskGroup1{
-    /* margin-top: -95px; */
-}
+/* .diskGroup1{
+    margin-top: -95px;
+} */
 
 .disk1
 {
