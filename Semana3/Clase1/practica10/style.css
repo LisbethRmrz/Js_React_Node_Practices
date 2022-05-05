@@ -1,5 +1,6 @@
 :root {
-    --main-bg-color: rgb(235, 226, 144);
+    --main-bg-color: #fbe3e3;
+    --wood: #c19A6B;
   }
 
 div.container{
@@ -18,24 +19,15 @@ div.base{
     margin-right: 10%;
     margin-top: 190px;
     /* position: relative; */
-	background-color: #C4947A;	
+	background-color: var(--wood);	
     z-index: 1;	
 }
-
-/* div.base-copy{
-    background-color: pink;
-    border: 1px solid #555;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-} */
 
 .leftTower, .centerTower, .rightTower {
     display: inline-flex;
     width: 1%;
     height: 180px;
-    background-color: #C4947A;			
+    background-color: var(--wood);			
 	margin-top: -150px;
     position: fixed;
     z-index: -1;
@@ -67,115 +59,45 @@ div.base{
     /* position: relative;  */
 }
 
-.diskGroup{
-    margin-top: -95px;
+.diskGroup1{
+    /* margin-top: -95px; */
 }
 
 .disk1
 {
-   
-    border-left: 36px solid rgb(235, 226, 144);
-    border-right: 36px solid rgb(235, 226, 144);
+    border-left: 36px solid var(--main-bg-color);
+    border-right: 36px solid var(--main-bg-color);
     width: 36px;
     height: 24px;
-    background-color: #007ac0;
-    margin-left: 20%;
+    background-color: #f6c8c7;
+    /* display: inline-block;
+    position: relative; */
 }
-
-/* .diskNew
-{
-    margin-top: -95px;
-    width: 108px;
-    height: 24px;
-    background-color: #12872B;
-    margin-left: 44%;
-} */
 
 .disk2
 {
-    border-left: 24px solid rgb(235, 226, 144);
-    border-right: 24px solid rgb(235, 226, 144);
+    border-left: 24px solid var(--main-bg-color);
+    border-right: 24px solid var(--main-bg-color);
     width: 60px;
     height: 24px;
-    background-color: #C04100;
-    margin-left: 20%;
+    background-color: #e3b0b0;
     z-index: 3;
 }
 
 .disk3
 {
-    border-left: 13px solid rgb(235, 226, 144);
-    border-right: 13px solid rgb(235, 226, 144);
+    border-left: 13px solid var(--main-bg-color);
+    border-right: 13px solid var(--main-bg-color);
     width: 82px;
     height: 24px;
-    background-color: #C0BB00;
-    margin-left: 20%;
+    background-color: #d7a5a5;
+    /* margin-left: 20%; */
 }
 
 .disk4
 {
     width: 108px;
     height: 24px;
-    background-color: #12872B;
-    margin-left: 20%;
+    background-color: #c19090;
+    /* margin-left: 20%; */
 }
-
-/* **************************************** */
-		/* .base
-		{
-			width: 350px;
-			height: 25px;
-			background-color: #C4947A;			
-			margin-top: 160px;
-			margin-left: 50px;
-		}
-		.stick1, .stick2, .stick3
-		{
-			width: 18px;
-			height: 125px;
-			background-color: #C4947A;			
-			margin-top: -150px;
-			margin-left: 105px;
-		}
-		.stick2
-		{
-			margin-top: -125px;
-			margin-left: 216px;
-		}
-		.stick3
-		{
-			margin-top: -125px;
-			margin-left: 327px;
-		}		
-		.disk1, .disk0
-		{
-			border-left: 24px solid #fff;
-			border-right: 24px solid #fff;
-			width: 60px;
-			height: 24px;
-			background-color: #C04100;
-		}
-		.disk2
-		{
-			border-left: 13px solid #fff;
-			border-right: 13px solid #fff;
-			width: 82px;
-			height: 24px;
-			background-color: #C0BB00;
-		}
-		.disk3
-		{
-			width: 108px;
-			height: 24px;
-			background-color: #12872B;
-		} */
-
-        /* .rectangleBase{
-            position: absolute;
-            background-color: rgb(255, 0, 212);
-            border: 1px solid #555;
-            width: 9%;
-            height:15px;
-            left: 19%;
-            z-index: 1;
-        } */

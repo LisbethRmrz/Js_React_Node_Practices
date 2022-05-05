@@ -5,6 +5,7 @@ function highOrder(data, cb){
     else{        
         console.log(data);
         setTimeout(cb, 10);
+        cb;
     }
 }
 
