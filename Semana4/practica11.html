@@ -8,44 +8,56 @@
 </head>
 <body>
 
-    <form action="">
-        <label for="textUrl">Enter a URL</label>
+    <form action="" method="post">
+        <label id="label" for="textUrl">Enter a URL</label>
         <input type="text" name="urlInput" id="textUrl"></input>
         <br>
         <br>
-        <button>Shorten</button>
-        <br>
-        <br>
-        <textArea></textArea>
+        <button name="data" type="button" id="shortenButton" onclick="apiCall(event)">Shorten</button>
     </form>
+        <br>
+        <br>
+        <textArea id="getShortedUrl"></textArea>
 
     <script>
-
-        let linkRequest = {
-        destination: "https://www.youtube.com/channel/UCHK4HD0ltu1-I212icLPt3g",
-        domain: { fullName: "rebrand.ly" }
-        }
-
-        // let apiKey = "69c42da67ee84e63aebbd7dc249a0a4d";
         let baseUrl = "https://api.rebrandly.com/v1/links";
-
         let headers = {
         'Content-Type': 'application/json',
         'apiKey': "69c42da67ee84e63aebbd7dc249a0a4d"
         }
 
-        fetch(baseUrl, {
-        method: 'POST',
-        body: JSON.stringify(linkRequest),
-        headers: headers,
-        }).then(response => {
-            if (response.ok){
-                console.log("OK");
-                return response.json();
-            }
-            throw new Error('Request has failed');
-        }, networkError => console.log(networkError.message)
-        ).then(link => {console.log(`Long URL was ${link.destination}, short URL is ${link.shortUrl}`)})
+        function apiCall(event) {
+            if(event){
+                event.preventDefault();
+                let getDestination = document.getElementById('textUrl').value;
+                let linkRequest = {
+                    destination: getDestination,
+                    domain: { fullName: "rebrand.ly" }
+                }
+
+                fetch(baseUrl, {
+                    method: 'POST',
+                    body: JSON.stringify(linkRequest),
+                    headers: headers,
+                }).then(response => {
+                        if (response.ok){
+                            console.log("OK");
+                            return response.json();
+                        }
+                    throw new Error('Request has failed!');
+                }, networkError => console.log(networkError.message))
+                .then(link => {getShortedUrl(link)});
+        }
+    }
+
+        const getShortedUrl = (link) => {
+            let textArea = document.getElementById('getShortedUrl');
+            let linkResult = document.createTextNode(`Short URL is ${link.shortUrl}`);
+            textArea.appendChild(linkResult);
+        }
+
+        let shortenButton = document.getElementById( 'shortenButton' );
+        shortenButton.addEventListener( 'click', apiCall(event), true );
 
     </script>
 </body>
