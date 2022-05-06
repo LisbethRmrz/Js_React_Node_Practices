@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(196, 230, 224);
+}
+
+.container>form, .getShortedUrl{
+    margin-top: 8%;
+    margin-left: 20%;
+    width: 60%;
+}
+
+.textUrl{
+    width: 50%;
+    margin-left: 25%;;
+}
+
+
+.shortenButton{
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 10px;
+}
+
+.getShortedUrl{
+    border: 3px solid rgb(121, 175, 165);
+    height: 70px;
+}
+
+.copyButton{
+    margin-top: 2%;
+    margin-left: 35%;
+}
+
+.refreshButton{
+    margin-left: 2%;
+    margin-top: 2%;
+}

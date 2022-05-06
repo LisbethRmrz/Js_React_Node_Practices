@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Rebrandly</title>
+</head>
+<body>
+
+    <div class="container">
+        <form action="" method="post">
+
+                <div class="col s12">
+                    <label class="labelUrl" id="label" for="textUrl">Enter a URL</label>
+                    <input type="text" name="textLong" id="textUrl" class="textUrl"></input>
+                </div>
+
+            <input type="button" id="shortenButton" class="shortenButton btn" onclick="apiCall()" value="Shorten"></input>
+        </form>
+        <div class="row">
+            <div class="col s12">
+                <textArea class="getShortedUrl" id="getShortedUrl" readonly="true"></textArea>
+            </div>
+            <div class="col s12">
+                <input type="button" class="copyButton btn" value="Copy to clipboard" id="copyButton" onclick="copyLink()"></input>
+                <input type="button" class="refreshButton btn disabled" value="Refresh" id="refreshButton" onclick="reloadPage()"></input>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="practica11.js"></script>
+</body>
+</html>
