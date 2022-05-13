@@ -1,0 +1,68 @@
+body{
+  background: #EAEDED;
+  font-family: Tahoma;
+}
+
+.app-title{
+  color: #BA4A00;
+  text-align: center;
+}
+
+#app{
+  display: flex;
+}
+
+#imagesContainer{
+  display: flex-wrap;
+  order: 1;
+  margin-top: 20px;
+  margin-left: 15px;
+  width: 25%;
+}
+
+#informationContainer{
+  order: 2;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.imagesCard{
+  display: flex;
+  border: solid 1px #D5DBDB;
+  height: 60px;
+  width: auto;
+  align-content: space-between;
+  margin-top: 5%;
+  border-radius: 15px;
+}
+
+.imagesCard:hover{
+  box-shadow: 2px 3px 3px #D5DBDB;
+  transition-timing-duration: ease;
+}
+
+.informationCard{
+  margin: 15px;
+  display: flex-wrap;
+  border: solid 1px #D5DBDB;
+  box-shadow: 2px 3px 3px #D5DBDB;
+  border-radius: 15px;
+}
+
+.cardTitle{
+  text-transform: capitalize;
+  margin-left: 4%;
+  color: #DC7633;
+}
+
+#moves, #order, #name, #nameLabel, #orderLabel, #movesLabel{
+  height: 20px;
+  width: 90%;
+  margin: 2%;
+  text-transform: capitalize;
+  border: none;
+}
+
+#nameLabel, #orderLabel, #movesLabel{
+  color: #DC7633;
+}
